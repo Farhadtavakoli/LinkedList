@@ -42,6 +42,7 @@ namespace StackTest
         {
             if (!isEmpty())
             {
+                Console.WriteLine($"The head element is {top.data}\n");
                 return top.data;
             }
             else
@@ -60,6 +61,8 @@ namespace StackTest
             }
             length--;
             top = top.link; // The top pointer points to the next element in the list 
+            print();
+
         }
 
         public void print()
@@ -71,15 +74,15 @@ namespace StackTest
             }
             else
             {
-                Console.WriteLine("------------");
+                Console.WriteLine("--------------------------");
                 Node temp = top;
                 while (temp != null)
                 {
                    Console.WriteLine($"{temp.data} ");
                    temp = temp.link;
                 }
-                Console.WriteLine();
-                Console.WriteLine($"------{length} item(s)-----");
+               // Console.WriteLine();
+                Console.WriteLine($"------{length} item(s)------");
             }
         }
 
