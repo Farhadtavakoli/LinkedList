@@ -8,13 +8,14 @@ namespace StackTest
         static void Main(string[] args)
         {
             StackList list = new StackList();
-            //list.push("Tavakoli");
-            //list.push("Farhad");
+            list.push("Tavakoli");
+            list.push("Farhad");
             list.push("Yasín");
-           
-           // list.print();
-            list.peek(list);
-          //  Console.WriteLine(list.top.data);
+            list.push("Farhad");
+            list.push("Baba");
+
+             list.print();
+            Console.WriteLine($"The head element is {list.peek()}");
             Console.ReadKey();
         }
     }

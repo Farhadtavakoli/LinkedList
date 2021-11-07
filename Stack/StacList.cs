@@ -7,6 +7,7 @@ namespace StackTest
     public class StackList
     {
         public Node top;
+        public int length;
         public StackList()
         {
             this.top = null;
@@ -22,6 +23,7 @@ namespace StackTest
                 return;
 
             }
+            length++;
             temp.data = data; // Putting data into  temp field
             temp.link = top; // Put top reference into temp link
             top = temp; // update top reference
@@ -36,11 +38,11 @@ namespace StackTest
         /// It returns the top element of the list
         /// </summary>
         /// <returns></returns>
-        public object peek(StackList list)
+        public object peek()
         {
             if (!isEmpty())
             {
-                return list.top.data;
+                return top.data;
             }
             else
             {
@@ -56,6 +58,7 @@ namespace StackTest
                 Console.WriteLine("No data! The list is empty");
                 return;
             }
+            length--;
             top = top.link; // The top pointer points to the next element in the list 
         }
 
@@ -70,15 +73,13 @@ namespace StackTest
             {
                 Console.WriteLine("------------");
                 Node temp = top;
-                //while (temp != null)
+                while (temp != null)
                 {
-                  
-                    Console.Write($"{top.data} ");
-                    temp = temp.link;
-                  
+                   Console.WriteLine($"{temp.data} ");
+                   temp = temp.link;
                 }
                 Console.WriteLine();
-                Console.WriteLine("------------");
+                Console.WriteLine($"------{length} item(s)-----");
             }
         }
 
