@@ -7,12 +7,12 @@ namespace LinkedList2
         static void Main(string[] args)
         {
             LinkedList myList = new LinkedList(); // It creates the first node.
-            myList.insertEnd("Yasin");
-            myList.insertEnd("Tavakoli");
-            myList.insertEnd("Myfuture");
-            myList.insertEnd("Mydream");
-            myList.insertEnd("Farhad");
-            myList.insertEnd("Jina");
+            myList.insertEnd("Java");
+            myList.insertEnd("C++");
+            myList.insertEnd("FoxPro :)");
+            myList.insertEnd("Javascript");
+            myList.insertEnd("Python");
+            myList.insertEnd("C");
             myList.printList();
           
           
@@ -28,7 +28,7 @@ namespace LinkedList2
             myList.removeFirst(myList);
             myList.printList();
             Console.WriteLine("*****************************************************");
-            if(myList.)
+           
           
             Console.WriteLine($"*********The last node is deleted******************");
             myList.printList();
@@ -45,6 +45,7 @@ namespace LinkedList2
             myList.removeData(myList, "Myfuture");
             myList.printList();
             Console.ReadKey();
+           
 
 
         }
