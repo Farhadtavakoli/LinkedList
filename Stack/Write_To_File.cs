@@ -8,12 +8,9 @@ namespace StackTest
     class Write_To_File
     {
         public StackList myList;
-        public StreamWriter Sw;
        public Write_To_File(StackList mylist)
         {
             myList = mylist;
-           
-            
         }
 
         public void write_To_File(StackList stack)
@@ -26,16 +23,18 @@ namespace StackTest
             //Create StreamWriter object to write string to FileSream
             StreamWriter sw = new StreamWriter(fs);
             Node temp =stack.top;
+            sw.WriteLine("--------------------------------");
             while (temp != null)
             {
                 sw.WriteLine(temp.data);
-               // File.WriteAllText(@"F:\C#\FileBank\DummyFile.txt", temp.data);
+                // File.WriteAllText(@"F:\C#\FileBank\DummyFile.txt", temp.data);
                 temp = temp.link;
             }
+            sw.WriteLine("--------------------------------");
+            sw.WriteLine();
+            sw.WriteLine($"Number of elementds in the stack is {stack.length} ");
+            sw.WriteLine($"The top element is {stack.top.data}");
             sw.Close();
         }
-
-
-
     }
 }

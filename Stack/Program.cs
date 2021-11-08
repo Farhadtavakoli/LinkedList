@@ -16,14 +16,12 @@ namespace StackTest
             list.push("Baba");
             list.push("Fullstack developer");
             list.push("Javascript");
+            list.push("Roya");
            
-             list.print();
+            list.print();
             list.peek();
-           // list.pop();
-       
             list.peek();
             file_write_Read.write_To_File(list);
-          //  Console.WriteLine($"The head element is {list.peek()}");
             Console.ReadKey();
 
         }
