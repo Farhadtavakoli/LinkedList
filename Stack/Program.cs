@@ -9,19 +9,18 @@ namespace StackTest
         {
             StackList list = new StackList();
             Write_To_File file_write_Read = new Write_To_File(list);
-            list.push("Tavakoli");
-            list.push("Farhad");
-            list.push("Yasín");
-            list.push("Farhad");
-            list.push("Baba");
-            list.push("Fullstack developer");
-            list.push("Javascript");
-            list.push("Roya");
+            list.push("WebDesign");
+            list.push(".Net Developer");
+            list.push("BackEnd developer");
+            list.push("FullStack");
+            list.push("Javascript and React");
+            list.push("MS Sql server");
+            list.push(2021);
+            list.push(2020);
            
             list.print();
             list.peek();
-            list.peek();
-            file_write_Read.write_To_File(list);
+           // file_write_Read.write_To_File(list);
             Console.ReadKey();
 
         }

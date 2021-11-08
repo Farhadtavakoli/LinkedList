@@ -12,7 +12,6 @@ namespace StackTest
         {
             this.top = null;
         }
-
         public void push(object data)
         {
             // Checks if the stack is full
@@ -21,7 +20,6 @@ namespace StackTest
             {
                 Console.WriteLine("The stack is full!");
                 return;
-
             }
             length++;
             temp.data = data; // Putting data into  temp field
@@ -33,22 +31,17 @@ namespace StackTest
         {
             return top == null; // If it is empty
         }
-
-        /// <summary>
-        /// It returns the top element of the list
-        /// </summary>
-        /// <returns></returns>
         public object peek()
         {
             if (!isEmpty())
             {
-                Console.WriteLine($"The head element is {top.data}\n");
+               Console.WriteLine($"The head element is {top.data}\n");
                 return top.data;
             }
             else
             {
                 Console.WriteLine("The list is empty");
-                return -1; // -1 is out of range and means no data
+                return -1; // out of range(empty)
             }
         }
 
@@ -61,7 +54,7 @@ namespace StackTest
             }
             length--;
             top = top.link; // The top pointer points to the next element in the list 
-            print();
+           //print();
 
         }
 
